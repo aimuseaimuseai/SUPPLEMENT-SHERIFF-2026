@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplement Sheriff 2026 – Amazon Compliance Guard</title>
+    <style>
+        /* ---------- RESET & BASE ---------- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; line-height: 1.6; color: #333; background: #fff; }
+
+        /* ---------- URGENCY BANNER ---------- */
+        .urgent-banner { background: #c00; color: white; text-align: center; padding: 10px; font-weight: bold; font-size: 1.1rem; }
+
+        /* ---------- HEADER ---------- */
+        header { background: #111; color: white; padding: 20px; text-align: center; }
+        .logo { font-size: 2rem; font-weight: 800; letter-spacing: 1px; }
+        .tagline { font-size: 1rem; opacity: 0.8; }
+
+        /* ---------- HERO ---------- */
+        .hero { background: #222; color: white; padding: 40px 20px; text-align: center; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .hero h2 { font-size: 1.5rem; color: #ffaa00; margin-bottom: 20px; }
+        .hero p { max-width: 700px; margin: 0 auto 20px; font-size: 1.2rem; }
+        .hero-stats { display: flex; justify-content: center; gap: 40px; font-size: 1rem; background: #333; padding: 15px; border-radius: 50px; max-width: 600px; margin: 20px auto 0; }
+
+        /* ---------- EVIDENCE (SHERIFF'S CATCH) ---------- */
+        .evidence { background: #000; color: #fff; padding: 40px 20px; }
+        .evidence-header { font-size: 2rem; font-weight: bold; color: gold; margin-bottom: 10px; }
+        .evidence-sub { font-style: italic; margin-bottom: 30px; }
+        .comparison { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; margin-bottom: 20px; }
+        .before, .after { flex: 1 1 300px; background: #1a1a1a; padding: 20px; border-radius: 8px; border-left: 5px solid; }
+        .before { border-color: #c00; }
+        .after { border-color: #0c0; }
+        .before h3, .after h3 { margin-bottom: 15px; }
+        .before ul, .after ul { list-style: none; }
+        .before li, .after li { margin-bottom: 10px; }
+        .note { font-size: 0.9rem; color: #aaa; display: block; }
+        .sheriff-verdict { text-align: center; font-size: 1.2rem; border-top: 1px solid #333; padding-top: 20px; max-width: 800px; margin: 20px auto 0; }
+
+        /* ---------- AUDIT ENGINE (FORM) ---------- */
+        .audit-engine { background: #f5f5f5; padding: 40px 20px; text-align: center; }
+        .price-box { background: gold; display: inline-block; padding: 10px 30px; border-radius: 50px; font-weight: bold; margin: 20px 0; }
+        .price { font-size: 2.5rem; }
+        .per { font-size: 1rem; }
+        .turnaround { font-size: 1.2rem; margin-bottom: 30px; }
+        .step { background: white; max-width: 600px; margin: 20px auto; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .step h3 { margin-bottom: 15px; }
+        .microcopy { color: #666; font-size: 0.9rem; margin: 10px 0; }
+
+        /* Form elements */
+        form label { display: block; text-align: left; margin: 15px 0 5px; font-weight: 600; }
+        form input, form input[type="file"], form textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+        form textarea { resize: vertical; }
+        .submit-btn { background: #c00; color: white; border: none; padding: 15px 40px; font-size: 1.2rem; font-weight: bold; border-radius: 50px; margin-top: 20px; cursor: pointer; width: auto; display: inline-block; }
+        .submit-btn:hover { background: #a00; }
+
+        /* ---------- WHY SECTION ---------- */
+        .why { padding: 40px 20px; text-align: center; background: white; }
+        .why h2 { font-size: 2rem; margin-bottom: 10px; }
+        .lead { font-size: 1.2rem; margin-bottom: 40px; color: #555; }
+        .features { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; max-width: 1200px; margin: 0 auto; }
+        .feature { flex: 1 1 300px; text-align: left; background: #fafafa; padding: 20px; border-radius: 8px; }
+        .feature h3 { margin-bottom: 10px; color: #c00; }
+
+        /* ---------- FOOTER ---------- */
+        footer { background: #111; color: white; text-align: center; padding: 30px; }
+        footer a { color: gold; text-decoration: none; }
+        .guarantee { margin-bottom: 15px; font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+
+    <!-- URGENCY BANNER -->
+    <div class="urgent-banner">⏰ DEADLINE WINDOW: 18 Days until Q2 Compliance Sweeps begin.</div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">🛡️ SUPPLEMENT SHERIFF 2026</div>
+        <div class="tagline">The Amazon Compliance Guard</div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>🚨 Catch Compliance Errors Before Amazon Does.</h1>
+        <h2>18 Days Until the March 31 Compliance Deadline.</h2>
+        <p>Don't risk your top-selling ASINs to a silent bot suppression. Generic AI misses context. Get a <strong>professional human-in-the-loop audit</strong> that protects your revenue.</p>
+        <div class="hero-stats">
+            <span>⏱️ Results usually within the hour.</span>
+            <span>⚖️ FDA Regulation Specialists</span>
+        </div>
+    </section>
+
+    <!-- EVIDENCE (THE SHERIFF'S CATCH) -->
+    <section class="evidence">
+        <div class="evidence-header">🏆 REAL CASE: The $49 Audit That Saved an ASIN</div>
+        <p class="evidence-sub">"Generic AI software gave this supplement a 'Passing Grade.' We caught the felony."</p>
+        <div class="comparison">
+            <div class="before">
+                <h3>BEFORE (The Error)</h3>
+                <ul>
+                    <li><strong>Ingredient Typo:</strong> "N,N-Dimenthyl Glycine HCL"</li>
+                    <li><strong>Illegal Measure:</strong> "3/16 tsp" <span class="note">(Bots ignore this, but Amazon doesn't!)</span></li>
+                    <li><strong>Risk Level:</strong> 🔴 HIGH (Suppression imminent)</li>
+                </ul>
+            </div>
+            <div class="after">
+                <h3>AFTER (The Remediation)</h3>
+                <ul>
+                    <li><strong>Corrected USP Name:</strong> "N,N-Dimethylglycine HCL" <span class="note">(Matches FDA database)</span></li>
+                    <li><strong>FDA-Compliant Measure:</strong> "¼ tsp (approx.)" <span class="note">(Conforms to 21 CFR 101.9(b)(5)(viii))</span></li>
+                    <li><strong>Status:</strong> ✅ READY TO PRINT</li>
+                </ul>
+            </div>
+        </div>
+        <div class="sheriff-verdict">The Sheriff’s Verdict: <em>"If you use fractions, they must be legal fractions. We don't just find the typo; we find the trap."</em></div>
+    </section>
+
+    <!-- AUDIT ENGINE (FORM) -->
+    <section class="audit-engine">
+        <h2>⚡ Instant Audit Request</h2>
+        <div class="price-box">
+            <span class="price">$49.00</span> <span class="per">(One ASIN / One Label)</span>
+        </div>
+        <div class="turnaround">⏱️ Turnaround: Usually within 1 hour.</div>
+
+        <!-- STEP 1: PAYPAL BUTTON (replace with your own PayPal link) -->
+        <div class="step">
+            <h3>Step 1: Secure Your Audit</h3>
+            <!-- 👇 REPLACE THE HREF WITH YOUR ACTUAL PAYPAL PAYMENT LINK -->
+            <a class="paypal-link" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=YOUR_PAYPAL_EMAIL&item_name=Supplement+Sheriff+Audit&amount=49.00&currency_code=USD" target="_blank">
+                <img src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" border="0" alt="Pay Now with PayPal">
+            </a>
+            <p class="microcopy">Click to pay. Your Transaction ID is your key to the form below.</p>
+        </div>
+
+        <!-- STEP 2: SUBMISSION FORM (sends to your email via a form service) -->
+        <div class="step">
+            <h3>Step 2: Submit Evidence</h3>
+            <p class="microcopy">Fill out the form below using your PayPal Transaction ID.</p>
+
+            <!-- 👇 REPLACE THE ACTION URL WITH YOUR FORMSERVICE ENDPOINT (e.g., Getform) -->
+            <form action="https://getform.io/f/your-unique-endpoint" method="POST" enctype="multipart/form-data">
+                <!-- Honeypot to prevent spam (optional but recommended) -->
+                <input type="text" name="_gotcha" style="display:none">
+
+                <label for="email">Contact Email:</label>
+                <input type="email" name="email" id="email" required placeholder="Where we send the final Sheriff’s Report">
+
+                <label for="product_info">Product ASIN or Name:</label>
+                <input type="text" name="product_info" id="product_info" required>
+
+                <label for="label">Label Upload (Hi-Res):</label>
+                <input type="file" name="label" id="label" accept="image/*" required>
+
+                <label for="paypal_txn">PayPal Transaction ID:</label>
+                <input type="text" name="paypal_txn" id="paypal_txn" required placeholder="17-digit code from your receipt">
+
+                <!-- Optional: include a redirect after submission -->
+                <input type="hidden" name="_redirect" value="https://YOURDOMAIN.com/thank-you.html">
+
+                <button type="submit" class="submit-btn">SUBMIT FOR ARREST</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- WHY SECTION -->
+    <section class="why">
+        <h2>🔍 Why Supplement Sheriff?</h2>
+        <p class="lead">Generic AI software is playing checkers. We are playing 3D chess against Amazon’s enforcement bots.</p>
+        <div class="features">
+            <div class="feature">
+                <h3>✅ Regulatory Citations for Appeal</h3>
+                <p>We don't just say "fix it." We give you the exact <strong>21 CFR 101.9</strong> citations to paste into your appeal to Amazon. You win faster.</p>
+            </div>
+            <div class="feature">
+                <h3>✅ Math Validation</h3>
+                <p>We cross-check every mg, mcg, and serving size. We catch the math errors that cause "Expiry Date" suspensions.</p>
+            </div>
+            <div class="feature">
+                <h3>✅ Real-Time Enforcement Monitoring</h3>
+                <p>We are auditing against the specific enforcement patterns rolling out <strong>March 31, 2026</strong>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="guarantee">⚖️ <strong>100% Compliance Guarantee:</strong> If we miss something, we re-audit for free.</div>
+        <div class="support">Support: <a href="mailto:audit@check-in-sheriff.online">audit@check-in-sheriff.online</a> (Response in &lt; 2 hours)</div>
+        <div class="copyright">© 2026 The Sheriff. Built for Amazon Sellers, by Amazon Sellers.</div>
+    </footer>
+
+    <!-- Optional: a simple thank you page (create thank-you.html and upload it) -->
+    <!-- You can create a basic thank-you.html with a success message -->
+</body>
+</html>
