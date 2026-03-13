@@ -140,7 +140,7 @@
             <p class="microcopy">Fill out the form below using your PayPal Transaction ID.</p>
 
             <!-- 👇 REPLACE THE ACTION URL WITH YOUR FORMSPARK ENDPOINT -->
-            <form action="https://submit-form.com/your-unique-id" method="POST" enctype="multipart/form-data">
+            <form action="form action="https://submit-form.com/GOmORATog" method="POST" enctype="multipart/form-data" method="POST" enctype="multipart/form-data">
                 <!-- Honeypot to prevent spam (optional but recommended) -->
                 <input type="text" name="_gotcha" style="display:none">
 
