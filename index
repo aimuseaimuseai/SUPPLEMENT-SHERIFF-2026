@@ -71,8 +71,8 @@
 </head>
 <body>
 
-    <!-- URGENCY BANNER -->
-    <div class="urgent-banner">⏰ DEADLINE WINDOW: 18 Days until Q2 Compliance Sweeps begin.</div>
+    <!-- URGENCY BANNER (now using fixed date) -->
+    <div class="urgent-banner">⏰ DEADLINE: March 31, 2026 – don’t wait.</div>
 
     <!-- HEADER -->
     <header>
@@ -83,7 +83,7 @@
     <!-- HERO -->
     <section class="hero">
         <h1>🚨 Catch Compliance Errors Before Amazon Does.</h1>
-        <h2>18 Days Until the March 31 Compliance Deadline.</h2>
+        <h2>Deadline: March 31, 2026 – don’t wait.</h2>
         <p>Don't risk your top-selling ASINs to a silent bot suppression. Generic AI misses context. Get a <strong>professional human-in-the-loop audit</strong> that protects your revenue.</p>
         <div class="hero-stats">
             <span>⏱️ Results usually within the hour.</span>
@@ -134,13 +134,13 @@
             <p class="microcopy">Click to pay. Your Transaction ID is your key to the form below.</p>
         </div>
 
-        <!-- STEP 2: SUBMISSION FORM (sends to your email via a form service) -->
+        <!-- STEP 2: SUBMISSION FORM (sends to your email via Formspark) -->
         <div class="step">
             <h3>Step 2: Submit Evidence</h3>
             <p class="microcopy">Fill out the form below using your PayPal Transaction ID.</p>
 
-            <!-- 👇 REPLACE THE ACTION URL WITH YOUR FORMSERVICE ENDPOINT (e.g., Getform) -->
-            <form action="https://getform.io/f/your-unique-endpoint" method="POST" enctype="multipart/form-data">
+            <!-- 👇 REPLACE THE ACTION URL WITH YOUR FORMSPARK ENDPOINT -->
+            <form action="https://submit-form.com/your-unique-id" method="POST" enctype="multipart/form-data">
                 <!-- Honeypot to prevent spam (optional but recommended) -->
                 <input type="text" name="_gotcha" style="display:none">
 
@@ -156,7 +156,7 @@
                 <label for="paypal_txn">PayPal Transaction ID:</label>
                 <input type="text" name="paypal_txn" id="paypal_txn" required placeholder="17-digit code from your receipt">
 
-                <!-- Optional: include a redirect after submission -->
+                <!-- Redirect after submission (create a simple thank-you.html) -->
                 <input type="hidden" name="_redirect" value="https://YOURDOMAIN.com/thank-you.html">
 
                 <button type="submit" class="submit-btn">SUBMIT FOR ARREST</button>
@@ -191,7 +191,6 @@
         <div class="copyright">© 2026 The Sheriff. Built for Amazon Sellers, by Amazon Sellers.</div>
     </footer>
 
-    <!-- Optional: a simple thank you page (create thank-you.html and upload it) -->
-    <!-- You can create a basic thank-you.html with a success message -->
+    <!-- Simple thank-you page (create a file named thank-you.html) -->
 </body>
 </html>
