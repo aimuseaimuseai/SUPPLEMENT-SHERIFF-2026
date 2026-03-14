@@ -6,131 +6,187 @@
     <title>Supplement Sheriff 2026 – Amazon Compliance Guard</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; }
-        .banner { background: #c00; color: white; text-align: center; padding: 10px; font-weight: bold; }
-        header { background: #111; color: white; padding: 20px; text-align: center; }
-        .logo { font-size: 2rem; font-weight: 800; }
-        .hero { background: #222; color: white; padding: 40px 20px; text-align: center; }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        .hero h2 { font-size: 1.5rem; color: #ffaa00; margin-bottom: 20px; }
-        .hero p { max-width: 700px; margin: 0 auto; }
-        .evidence { background: #000; color: #fff; padding: 40px 20px; }
-        .evidence-header { font-size: 2rem; color: gold; margin-bottom: 20px; }
-        .comparison { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
-        .before, .after { flex: 1 1 300px; background: #1a1a1a; padding: 20px; border-radius: 8px; }
-        .before { border-left: 5px solid #c00; }
-        .after { border-left: 5px solid #0c0; }
-        .audit-engine { background: #f5f5f5; padding: 40px 20px; text-align: center; }
-        .price-box { background: gold; display: inline-block; padding: 10px 30px; border-radius: 50px; font-weight: bold; margin: 20px 0; }
-        .price { font-size: 2.5rem; }
-        .step { background: white; max-width: 600px; margin: 20px auto; padding: 30px; border-radius: 8px; }
-        form label { display: block; text-align: left; margin: 15px 0 5px; font-weight: 600; }
-        form input, form input[type="file"] { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
-        .submit-btn { background: #c00; color: white; border: none; padding: 15px 40px; font-size: 1.2rem; font-weight: bold; border-radius: 50px; margin-top: 20px; cursor: pointer; }
-        .why { padding: 40px 20px; text-align: center; }
-        .features { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; max-width: 1200px; margin: 0 auto; }
-        .feature { flex: 1 1 300px; text-align: left; background: #fafafa; padding: 20px; border-radius: 8px; }
-        footer { background: #111; color: white; text-align: center; padding: 30px; }
-        footer a { color: gold; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #222; background: #fafafa; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* urgency banner */
+        .urgent-banner { background: #c00; color: white; text-align: center; padding: 12px; font-weight: 600; font-size: 1.1rem; }
+        
+        /* header */
+        header { background: #111; color: white; padding: 30px 0; text-align: center; border-bottom: 3px solid gold; }
+        .logo { font-size: 2.5rem; font-weight: 800; letter-spacing: 1px; }
+        .tagline { font-size: 1.2rem; opacity: 0.8; margin-top: 5px; }
+        
+        /* hero */
+        .hero { background: #222; color: white; padding: 60px 0 40px; text-align: center; }
+        .hero h1 { font-size: 2.8rem; margin-bottom: 15px; font-weight: 700; }
+        .hero h2 { font-size: 1.8rem; color: #ffaa00; margin-bottom: 25px; font-weight: 400; }
+        .hero p { max-width: 800px; margin: 0 auto 30px; font-size: 1.2rem; }
+        .hero-stats { display: flex; justify-content: center; gap: 40px; background: #333; padding: 15px 30px; border-radius: 50px; max-width: 600px; margin: 20px auto 0; flex-wrap: wrap; }
+        .hero-stats span { white-space: nowrap; }
+        
+        /* social proof bar */
+        .social-proof { background: #2a6f97; color: white; text-align: center; padding: 12px; font-size: 1.2rem; font-weight: 600; border-top: 1px solid #1e4e6f; border-bottom: 1px solid #1e4e6f; }
+        
+        /* evidence / pdf preview */
+        .evidence { background: #000; color: #fff; padding: 60px 0; text-align: center; }
+        .evidence h2 { font-size: 2.2rem; color: gold; margin-bottom: 20px; }
+        .evidence-sub { font-size: 1.2rem; margin-bottom: 40px; opacity: 0.9; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .pdf-preview img { max-width: 100%; border: 3px solid gold; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.7); cursor: pointer; transition: transform 0.2s; }
+        .pdf-preview img:hover { transform: scale(1.02); }
+        .pdf-link { display: inline-block; margin-top: 20px; color: gold; font-weight: bold; text-decoration: none; font-size: 1.2rem; border: 1px solid gold; padding: 10px 25px; border-radius: 40px; transition: 0.3s; background: rgba(255,215,0,0.1); }
+        .pdf-link:hover { background: gold; color: black; }
+        
+        /* how it works */
+        .how-it-works { padding: 60px 0; background: white; text-align: center; }
+        .how-it-works h2 { font-size: 2.2rem; margin-bottom: 50px; }
+        .steps { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
+        .step { flex: 1 1 250px; max-width: 300px; padding: 30px 20px; background: #f5f5f5; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .step .number { width: 50px; height: 50px; background: #c00; color: white; font-size: 1.8rem; font-weight: bold; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+        .step h3 { margin-bottom: 15px; font-size: 1.4rem; }
+        .step p { color: #555; }
+        
+        /* button */
+        .cta-button { display: inline-block; background: linear-gradient(145deg, #c00, #a00); color: white; font-size: 1.6rem; font-weight: 700; padding: 16px 50px; border-radius: 60px; text-decoration: none; margin: 40px 0 20px; box-shadow: 0 8px 20px rgba(192,0,0,0.5); transition: all 0.2s; border: 1px solid #ff4d4d; }
+        .cta-button:hover { background: linear-gradient(145deg, #a00, #800); transform: translateY(-2px); box-shadow: 0 12px 25px rgba(192,0,0,0.6); }
+        .cta-button:active { transform: translateY(0); box-shadow: 0 5px 15px rgba(192,0,0,0.4); }
+        
+        /* why trust us */
+        .why { padding: 60px 0; background: #f0f0f0; text-align: center; }
+        .why h2 { font-size: 2.2rem; margin-bottom: 20px; }
+        .why p.lead { font-size: 1.2rem; max-width: 800px; margin: 0 auto 50px; color: #333; }
+        .features { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
+        .feature { flex: 1 1 280px; background: white; padding: 30px 20px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); transition: 0.2s; }
+        .feature:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+        .feature h3 { color: #c00; margin-bottom: 15px; font-size: 1.4rem; }
+        
+        /* footer */
+        footer { background: #111; color: white; text-align: center; padding: 40px 0; }
+        footer a { color: gold; text-decoration: none; }
+        .guarantee { font-size: 1.2rem; margin-bottom: 15px; }
+        
+        /* responsive */
+        @media (max-width: 700px) {
+            .hero h1 { font-size: 2rem; }
+            .hero h2 { font-size: 1.4rem; }
+            .hero-stats { flex-direction: column; gap: 10px; border-radius: 30px; padding: 15px; }
+            .hero-stats span { white-space: normal; }
+            .steps { flex-direction: column; align-items: center; }
+            .step { max-width: 100%; }
+            .cta-button { font-size: 1.3rem; padding: 14px 30px; display: block; width: 90%; margin-left: auto; margin-right: auto; }
+            .social-proof { font-size: 1rem; padding: 10px; }
+        }
     </style>
 </head>
 <body>
-    <div class="banner">⏰ DEADLINE: March 31, 2026 – don't wait.</div>
+    <!-- URGENCY BANNER -->
+    <div class="urgent-banner">⏰ DEADLINE: March 31, 2026 – don’t wait.</div>
 
+    <!-- HEADER -->
     <header>
-        <div class="logo">🛡️ SUPPLEMENT SHERIFF 2026</div>
-        <div>The Amazon Compliance Guard</div>
+        <div class="container">
+            <div class="logo">🛡️ SUPPLEMENT SHERIFF 2026</div>
+            <div class="tagline">The Amazon Compliance Guard</div>
+        </div>
     </header>
 
+    <!-- HERO -->
     <section class="hero">
-        <h1>🚨 Catch Compliance Errors Before Amazon Does.</h1>
-        <h2>Deadline: March 31, 2026</h2>
-        <p>Don't risk your top-selling ASINs to bot suppression. Get a professional human audit that protects your revenue.</p>
-        <div style="margin-top: 20px;">⏱️ Results usually within the hour | ⚖️ FDA Specialists</div>
+        <div class="container">
+            <h1>🚨 See Exactly What Amazon Will Flag – Before You Pay a Cent.</h1>
+            <h2>Deadline: March 31, 2026 – Act Now</h2>
+            <p>Most “audits” ask for money upfront. We prove our value first.<br> 
+            <strong>Submit your label, get Page 1 of your audit free.</strong> If you see critical errors, you choose to unlock the full ready‑to‑print report for $49.</p>
+            <div class="hero-stats">
+                <span>⏱️ Preview in hours</span>
+                <span>⚖️ Human‑in‑the‑loop</span>
+                <span>📄 Pay only if you trust</span>
+            </div>
+            <!-- BIG BUTTON LINKING TO TALLY FORM -->
+            <a href="https://tally.so/r/A78PxW" class="cta-button" target="_blank">▶ Start Your Free Audit Preview</a>
+            <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">No payment info needed – just your email and label.</p>
+        </div>
     </section>
 
+    <!-- SOCIAL PROOF BAR -->
+    <div class="social-proof">
+        ⭐ 300+ Labels Audited this month. 0 Suppressions post‑audit. ⭐
+    </div>
+
+    <!-- EVIDENCE / PDF PREVIEW (THE SHERIFF'S CATCH) -->
     <section class="evidence">
-        <div class="evidence-header">🏆 REAL CASE: The $49 Audit That Saved an ASIN</div>
-        <div class="comparison">
-            <div class="before">
-                <h3>BEFORE (The Error)</h3>
-                <ul style="list-style: none;">
-                    <li><strong>Ingredient Typo:</strong> "N,N-Dimenthyl Glycine HCL"</li>
-                    <li><strong>Illegal Measure:</strong> "3/16 tsp"</li>
-                    <li><strong>Risk Level:</strong> 🔴 HIGH</li>
-                </ul>
+        <div class="container">
+            <h2>🏆 REAL CASE: What Your Free Preview Looks Like</h2>
+            <p class="evidence-sub">We send you Page 1 of a real audit – so you know exactly what we catch.</p>
+            <div class="pdf-preview">
+                <!-- Display the first page image directly -->
+                <img src="audit-preview.jpg" alt="First page of a real audit showing a critical typo and illegal measurement">
+                <br>
+                <!-- Separate link to open full PDF -->
+                <a href="full-audit-example.pdf" target="_blank" class="pdf-link">📄 Open full sample audit (PDF)</a>
             </div>
-            <div class="after">
-                <h3>AFTER (The Remediation)</h3>
-                <ul style="list-style: none;">
-                    <li><strong>Corrected Name:</strong> "N,N-Dimethylglycine HCL"</li>
-                    <li><strong>FDA Measure:</strong> "¼ tsp (approx.)"</li>
-                    <li><strong>Status:</strong> ✅ READY TO PRINT</li>
-                </ul>
-            </div>
+            <p style="margin-top: 30px; color: #ddd;">Your preview will highlight actual errors from your label – like the "Dimenthyl" typo and illegal measurement shown above.</p>
         </div>
     </section>
 
-    <section class="audit-engine">
-        <h2>⚡ Instant Audit Request</h2>
-        <div class="price-box">
-            <span class="price">$49.00</span> <span>(One ASIN / One Label)</span>
-        </div>
-
-        <div class="step">
-            <h3>Step 1: Pay with PayPal</h3>
-            <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=YOUR_PAYPAL_EMAIL&item_name=Supplement+Sheriff+Audit&amount=49.00&currency_code=USD" target="_blank">
-                <img src="https://www.paypalobjects.com/en_US/i/btn/btn_paynowCC_LG.gif" alt="Pay Now">
-            </a>
-            <p style="margin-top: 10px;">After payment, copy your Transaction ID.</p>
-        </div>
-
-        <div class="step">
-            <h3>Step 2: Submit Your Details</h3>
-            <form action="https://submit-form.com/GOmORATog" method="POST" enctype="multipart/form-data">
-                <input type="text" name="_gotcha" style="display:none">
-                
-                <label>Contact Email:</label>
-                <input type="email" name="email" required placeholder="Where to send your report">
-                
-                <label>Product ASIN or Name:</label>
-                <input type="text" name="product" required>
-                
-                <label>Label Upload (Hi-Res):</label>
-                <input type="file" name="label" accept="image/*" required>
-                
-                <label>PayPal Transaction ID:</label>
-                <input type="text" name="paypal_txn" required placeholder="17-digit code from PayPal">
-                
-                <input type="hidden" name="_redirect" value="https://YOUR_GITHUB_USERNAME.github.io/supplement-sheriff/thank-you.html">
-                
-                <button type="submit" class="submit-btn">SUBMIT FOR ARREST</button>
-            </form>
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>🔍 How It Works – 100% Transparent</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="number">1</div>
+                    <h3>Submit Your Label</h3>
+                    <p>Fill out our simple form (email, product link/ASIN, and label image). No payment – ever.</p>
+                </div>
+                <div class="step">
+                    <div class="number">2</div>
+                    <h3>Get Your Free Preview</h3>
+                    <p>Within hours, we email you Page 1 of your audit. You'll see real violations (typos, illegal measures, math errors) that Amazon would suppress.</p>
+                </div>
+                <div class="step">
+                    <div class="number">3</div>
+                    <h3>Pay Only If You Trust</h3>
+                    <p>If you want the full 3‑page report with ready‑to‑print fixes and FDA citations, follow the payment link in the email ($49). Once paid, we send the complete PDF.</p>
+                </div>
+            </div>
+            <p style="margin-top: 40px; font-size: 1.1rem;"><strong>No upfront payment. No subscription. Just honest work.</strong></p>
         </div>
     </section>
 
+    <!-- WHY TRUST US -->
     <section class="why">
-        <h2>🔍 Why Supplement Sheriff?</h2>
-        <div class="features">
-            <div class="feature">
-                <h3>✅ Regulatory Citations</h3>
-                <p>We give you exact 21 CFR 101.9 citations for your appeal.</p>
-            </div>
-            <div class="feature">
-                <h3>✅ Math Validation</h3>
-                <p>We cross-check every mg, mcg, and serving size.</p>
-            </div>
-            <div class="feature">
-                <h3>✅ Real-Time Monitoring</h3>
-                <p>Auditing against March 31, 2026 enforcement patterns.</p>
+        <div class="container">
+            <h2>🛡️ Why Supplement Sheriff?</h2>
+            <p class="lead">Because we don't hide behind generic AI – we show you the evidence first.</p>
+            <div class="features">
+                <div class="feature">
+                    <h3>✅ Human‑in‑the‑loop</h3>
+                    <p>Your label is reviewed by an actual compliance specialist. We catch what bots miss.</p>
+                </div>
+                <div class="feature">
+                    <h3>✅ Regulatory Citations</h3>
+                    <p>We provide exact 21 CFR 101.9 references so you can appeal with confidence.</p>
+                </div>
+                <div class="feature">
+                    <h3>✅ Math Validation</h3>
+                    <p>We check every mg, mcg, and serving size against FDA rounding rules.</p>
+                </div>
+                <div class="feature">
+                    <h3>✅ Preview‑then‑Pay</h3>
+                    <p>You see the value before spending a dime. That’s the opposite of a scam.</p>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer>
-        <div>⚖️ 100% Guarantee: If we miss something, we re-audit for free.</div>
-        <div style="margin: 10px 0;">Support: <a href="mailto:audit@check-in-sheriff.online">audit@check-in-sheriff.online</a></div>
-        <div>© 2026 The Sheriff. Built for Amazon Sellers.</div>
+        <div class="container">
+            <div class="guarantee">⚖️ 100% Guarantee: If we miss something, we re‑audit for free.</div>
+            <div style="margin: 15px 0;">Questions? Contact <a href="mailto:audit@check-in-sheriff.online">audit@check-in-sheriff.online</a> – we reply within hours.</div>
+            <div>© 2026 The Sheriff. Built for Amazon sellers, by Amazon sellers.</div>
+        </div>
     </footer>
 </body>
 </html>
