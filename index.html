@@ -2,6 +2,486 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Supplement Sheriff 2026 – Amazon Compliance Guard | Video Audit Preview</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #fafafa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* urgency banner */
+        .urgent-banner {
+            background: #c00;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: 0.3px;
+        }
+
+        /* header */
+        header {
+            background: #111;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            border-bottom: 3px solid gold;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        /* VIDEO SECTION — upper middle part, immediately visible */
+        .video-spotlight {
+            background: #0a0c10;
+            padding: 40px 20px 50px 20px;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .video-spotlight .container {
+            max-width: 1000px;
+        }
+
+        .video-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #ffcc33;
+            margin-bottom: 15px;
+            letter-spacing: -0.2px;
+        }
+
+        .video-sub {
+            font-size: 1.1rem;
+            color: #ddd;
+            margin-bottom: 25px;
+        }
+
+        .video-wrapper {
+            max-width: 880px;
+            margin: 0 auto;
+            background: #000;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 215, 0, 0.4);
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: auto;
+            display: block;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            background: #000;
+        }
+
+        /* hero section (remains unchanged but slightly adjusted margin) */
+        .hero {
+            background: #222;
+            color: white;
+            padding: 60px 0 40px;
+            text-align: center;
+        }
+
+        .hero-badge {
+            width: 150px;
+            height: auto;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .hero h2 {
+            font-size: 1.8rem;
+            color: #ffaa00;
+            margin-bottom: 25px;
+            font-weight: 400;
+        }
+
+        .hero p {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-size: 1.2rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            background: #333;
+            padding: 15px 30px;
+            border-radius: 50px;
+            max-width: 600px;
+            margin: 20px auto 0;
+            flex-wrap: wrap;
+        }
+
+        .hero-stats span {
+            white-space: nowrap;
+            font-weight: 600;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #c00;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 15px 40px;
+            border-radius: 60px;
+            text-decoration: none;
+            margin: 40px 0 20px;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(192, 0, 0, 0.4);
+        }
+
+        .cta-button:hover {
+            background: #e00;
+            transform: scale(1.02);
+        }
+
+        /* evidence / pdf preview */
+        .evidence {
+            background: #000;
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .evidence h2 {
+            font-size: 2.2rem;
+            color: gold;
+            margin-bottom: 20px;
+        }
+
+        .evidence-sub {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .pdf-preview img {
+            max-width: 100%;
+            border: 3px solid gold;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .pdf-preview a {
+            display: inline-block;
+            margin-top: 20px;
+            color: gold;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border: 1px solid gold;
+            padding: 10px 25px;
+            border-radius: 40px;
+            transition: 0.3s;
+        }
+
+        .pdf-preview a:hover {
+            background: gold;
+            color: black;
+        }
+
+        /* how it works */
+        .how-it-works {
+            padding: 60px 0;
+            background: white;
+            text-align: center;
+        }
+
+        .how-it-works h2 {
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+        }
+
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .step {
+            flex: 1 1 250px;
+            max-width: 300px;
+            padding: 30px 20px;
+            background: #f5f5f5;
+            border-radius: 12px;
+        }
+
+        .step .number {
+            width: 50px;
+            height: 50px;
+            background: #c00;
+            color: white;
+            font-size: 1.8rem;
+            font-weight: bold;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .step h3 {
+            margin-bottom: 15px;
+        }
+
+        .step p {
+            color: #555;
+        }
+
+        /* FOOTER — enhanced with disclaimer + privacy note */
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 40px 0 30px;
+        }
+
+        .guarantee {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        footer a {
+            color: gold;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .legal-privacy-wrapper {
+            max-width: 1100px;
+            margin: 30px auto 20px;
+            text-align: left;
+            background: #1a1a1a;
+            border-radius: 20px;
+            padding: 25px 30px;
+            border-left: 5px solid #ffaa33;
+        }
+
+        .privacy-note {
+            background: #232323;
+            padding: 18px 22px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+            border: 1px solid #3a3a3a;
+        }
+
+        .privacy-note strong {
+            color: #ffcc66;
+        }
+
+        .disclaimer-text {
+            font-size: 0.85rem;
+            line-height: 1.55;
+            color: #dddddd;
+            background: #0f0f0f;
+            padding: 18px 22px;
+            border-radius: 16px;
+            border: 1px solid #333;
+        }
+
+        .disclaimer-text .mandatory-title {
+            font-weight: 800;
+            font-size: 1rem;
+            color: #ffaa66;
+            display: inline-block;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .small-note {
+            font-size: 0.8rem;
+            margin-top: 20px;
+            color: #aaa;
+            text-align: center;
+        }
+
+        @media (max-width: 700px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero h2 {
+                font-size: 1.4rem;
+            }
+
+            .steps {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .step {
+                max-width: 100%;
+            }
+
+            .video-title {
+                font-size: 1.4rem;
+            }
+
+            .legal-privacy-wrapper {
+                padding: 18px 16px;
+            }
+
+            .privacy-note,
+            .disclaimer-text {
+                padding: 14px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="urgent-banner">⏰ DEADLINE: March 31, 2026 – Act before Amazon suppresses your ASIN.</div>
+
+    <header>
+        <div class="container">
+            <div class="logo">🛡️ SUPPLEMENT SHERIFF 2026</div>
+            <div class="tagline">The Amazon Compliance Guard</div>
+        </div>
+    </header>
+
+    <!-- ========== NEW VIDEO SECTION: AVATAR INTRO (UPPER MIDDLE, IMMEDIATE VISIBILITY) ========= -->
+    <section class="video-spotlight">
+        <div class="container">
+            <div class="video-title">🎬 Meet The Sheriff – 20-Second Intelligence Scan</div>
+            <div class="video-sub">See how our AI + human audit catches ASIN violations before Amazon does</div>
+            <div class="video-wrapper">
+                <video controls autoplay muted playsinline preload="metadata">
+                    <source src="video.mp4" type="video/mp4">
+                    Your browser does not support the video tag. Upgrade to view the Sheriff avatar.
+                </video>
+            </div>
+            <p style="margin-top: 18px; font-size: 0.9rem; color: #c0c0c0;">⭐ Avatar walkthrough: label vs listing mismatch detection | FDA / FTC red flags</p>
+        </div>
+    </section>
+
+    <!-- hero section (original style) -->
+    <section class="hero">
+        <div class="container">
+            <img src="badge.jpg" alt="Supplement Sheriff Amazon Compliance 2026" class="hero-badge">
+            <h1>🚨 See Exactly What Amazon Will Flag – Before You Pay a Cent.</h1>
+            <h2>March 31 Deadline Compliance Check</h2>
+            <p>We provide a <strong>Human-in-the-Loop</strong> audit of your label, listing, and supplement facts.<br> 
+            <strong>Get Page 1 of your audit free.</strong> Unlock the full 3-page "Ready-to-Print" remediation plan for $49 only if you trust the results.</p>
+            <div class="hero-stats">
+                <span>⏱️ Preview in 24h</span>
+                <span>⚖️ Regulatory Citations</span>
+                <span>📄 No Upfront Cost</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- evidence / pdf preview -->
+    <section class="evidence">
+        <div class="container">
+            <h2>🏆 REAL CASE: What Your Free Preview Looks Like</h2>
+            <p class="evidence-sub">We send you Page 1 of a real audit – so you know exactly what we catch.</p>
+            <div class="pdf-preview">
+                <img src="audit-preview.jpg" alt="First page of a real audit showing a critical typo">
+                <br>
+                <a href="full-audit-example.pdf" target="_blank">📄 Click to view the full sample audit (PDF)</a>
+            </div>
+            <p style="margin-top: 30px; color: #ddd;">Your preview will highlight actual errors—like the "Ashwagandha herb" vs "root" contradiction.</p>
+        </div>
+    </section>
+
+    <!-- how it works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>🔍 How It Works – 100% Transparent</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="number">1</div>
+                    <h3>Submit Your Details</h3>
+                    <p>Provide your email, Amazon URL, and label image. No payment info required.</p>
+                </div>
+                <div class="step">
+                    <div class="number">2</div>
+                    <h3>Get Free Preview</h3>
+                    <p>Within 24 hours, we email you Page 1 showing critical violations.</p>
+                </div>
+                <div class="step">
+                    <div class="number">3</div>
+                    <h3>Pay Only If You Trust</h3>
+                    <p>Unlock the full report with "Ready-to-Print" fixes for $49.</p>
+                </div>
+            </div>
+            <a href="https://tally.so/r/A78PxW" class="cta-button" target="_blank">▶ Start Your Free Audit Preview</a>
+            <p style="margin-top: 10px; font-size: 0.9rem; color: #666;">No credit card required – Just your email and label.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER with mandatory disclaimer + privacy/data retention note -->
+    <footer>
+        <div class="container">
+            <div class="guarantee">⚖️ 100% Guarantee: Human-in-the-Loop Accuracy.</div>
+            <div style="margin: 10px 0;">Questions? Contact <a href="mailto:audit@check-in-sheriff.online">audit@check-in-sheriff.online</a>.</div>
+            
+            <!-- combined legal & privacy section -->
+            <div class="legal-privacy-wrapper">
+                <!-- PRIVACY NOTE: explicit data handling -->
+                <div class="privacy-note">
+                    <strong>🔐 Privacy & Data Retention Policy:</strong> We do NOT store any personal data, product images, ASINs, or URLs after your audit is complete. All information (supplement labels, Amazon listing URLs, ASIN numbers, and uploaded images) is used exclusively to generate your compliance report and is permanently deleted immediately after the report is delivered to your email. No databases retain your content. Your data stays yours — only public information is analyzed, and reports are purged post-delivery. 🧹
+                </div>
+
+                <!-- MANDATORY LEGAL DISCLAIMER (exact text) -->
+                <div class="disclaimer-text">
+                    <span class="mandatory-title">🚨 MANDATORY LEGAL & COMPLIANCE DISCLAIMER 🚨</span><br><br>
+                    Supplement Sheriff is a diagnostic and informational tool designed exclusively to identify potential text and layout discrepancies between your physical supplement label and your digital Amazon listing. It is NOT a substitute for legal counsel and does NOT act as a regulatory authority or issue compliance certificates. This report highlights potential triggers for Amazon's automated scanning bots. However, the ultimate responsibility for ensuring that your product, label, ingredients, and listing fully comply with FDA regulations, FTC guidelines, and Amazon's Terms of Service rests entirely and exclusively with you, the seller. Relying on this audit does not legally guarantee protection against ASIN suppression, account suspension, or regulatory action. By using this service, you acknowledge that you are solely responsible for your business's legal and marketplace compliance.
+                </div>
+                <div class="small-note">
+                    ⚡ Supplement Sheriff does not retain any submitted images, ASINs, or URL data after the final report is sent. All analysis is ephemeral.
+                </div>
+            </div>
+            <div style="margin-top: 25px; font-size: 0.75rem; opacity: 0.7;">© 2026 The Sheriff. Built for Amazon sellers. No data mining, no long-term storage.</div>
+        </div>
+    </footer>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Supplement Sheriff 2026 – Amazon Compliance Guard</title>
     <style>
